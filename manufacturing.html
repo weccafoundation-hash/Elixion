@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing of Consumables | Elixion Prime</title>
+    
+
+    <meta property="og:title" content="Manufacturing - Elixion Prime">
+    <meta property="og:description"
+        content="Medical and industrial consumables—built to meet quality and supply reliability expectations.">
+    <meta property="og:image" content="placeholder.svg">
+    <meta property="og:url" content="https://www.elixionprime.com/manufacturing.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components.css">
+
+    <style>
+        .mfg-overview-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .mfg-overview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .capabilities-card {
+            background-color: var(--color-navy-light);
+            color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .capabilities-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .capabilities-list li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            color: #E0E0E0;
+        }
+
+        .capabilities-list li::before {
+            content: '⚙️';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="manufacturing.html" class="nav-link active">Manufacturing</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="#"
+                            onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
+                            class="btn btn-primary" style="margin-left: 1rem;">Request Quote</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Manufacturing & Products</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; color: #E0E0E0;">Medical and industrial
+                consumables—built to meet strict quality standards and supply reliability expectations.</p>
+        </div>
+    </section>
+
+    <!-- Manufacturing Overview -->
+    <section class="section">
+        <div class="container mfg-overview-grid">
+            <div class="overview-text">
+                <span class="section-subtitle">A New Standard of Supply</span>
+                <h2>Commitment to Precision and Availability</h2>
+                <p>Elixion Prime is expanding its operational footprint into the direct manufacturing of high-demand
+                    medical and industrial consumables. We recognize that the operational capacity of healthcare
+                    facilities, laboratories, and industrial enterprises relies entirely on uninterrupted supply chains.
+                </p>
+                <p>Our upcoming product lines are being developed with strict adherence to material quality, durability,
+                    and sanitary safety. By bringing production under the Elixion umbrella, we eliminate third-party
+                    logistics fragmentation, ensuring consistent supply readiness for our corporate partners.</p>
+            </div>
+
+            <div class="capabilities-card">
+                <h3
+                    style="color: var(--color-white); margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-green); padding-bottom: 0.5rem; display: inline-block;">
+                    Production Capabilities</h3>
+                <ul class="capabilities-list">
+                    <li><strong>Product Development:</strong> Rigorous materials testing and sampling phases currently
+                        underway.</li>
+                    <li><strong>Bulk Readiness:</strong> Infrastructure designed for high-volume corporate and
+                        institutional fulfillment.</li>
+                    <li><strong>Packaging Standards:</strong> Secure, industry-appropriate containment designed for
+                        sterile transport and storage.</li>
+                    <li><strong>Partnership Models:</strong> Dedicated support for bulk wholesale clients and authorized
+                        regional distributors.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="section" style="background-color: var(--color-off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Initial Product Line</span>
+                <h2>Consumables Pipeline</h2>
+                <p style="color: var(--color-text-light);">Review our forthcoming products. Samples arriving next week.
+                </p>
+            </div>
+
+            <!-- Gloves -->
+            <div class="product-block">
+                <div class="product-img-wrapper">
+                    <img src="placeholder.svg" alt="Industrial and Medical Gloves"
+                        style="max-height: 250px; margin: 0 auto;" loading="lazy" decoding="async">
+                </div>
+                <div class="product-details">
+                    <span class="badge-soon">Samples arriving next week</span>
+                    <h3>Disposable Protective Gloves</h3>
+                    <p style="color: var(--color-text-light);">High-tensile, ambidextrous protective gloves designed for
+                        both medical examination use and light industrial protection. Engineered for maximum tactile
+                        sensitivity while resisting punctures and chemical degradation.</p>
+
+                    <ul class="product-features">
+                        <li><strong>Use Cases:</strong> Hospitals, Clinics, Laboratories, Hospitality, Food Service, and
+                            Industrial processing.</li>
+                        <li><strong>Packaging Specs:</strong> Details to be confirmed upon sample approval. Will support
+                            bulk pallet distribution.</li>
+                    </ul>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#enquiry-form" class="btn btn-primary">Request Wholesale Quote</a>
+                        <a href="#enquiry-form" class="btn btn-outline">Become a Distributor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tissue Paper -->
+            <div class="product-block">
+                <div class="product-img-wrapper">
+                    <img src="placeholder.svg" alt="Premium Tissue Paper"
+                        style="max-height: 250px; margin: 0 auto;" loading="lazy" decoding="async">
+                </div>
+                <div class="product-details">
+                    <span class="badge-soon">Samples arriving next week</span>
+                    <h3>Premium Tissue Paper</h3>
+                    <p style="color: var(--color-text-light);">Soft, high-absorbency tissue paper manufactured from
+                        sustainably sourced virgin pulp. Designed specifically for high-traffic corporate environments,
+                        retail distribution, and premium hospitality settings.</p>
+
+                    <ul class="product-features">
+                        <li><strong>Use Cases:</strong> Hotels, Corporate Offices, Supermarkets, Institutional
+                            Facilities, and Households.</li>
+                        <li><strong>Packaging Specs:</strong> Details to be confirmed upon sample approval. Available in
+                            multi-pack institutional formatting.</li>
+                    </ul>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#enquiry-form" class="btn btn-primary">Request Wholesale Quote</a>
+                        <a href="#enquiry-form" class="btn btn-outline">Become a Distributor</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pads -->
+            <div class="product-block" style="margin-bottom: 0;">
+                <div class="product-img-wrapper">
+                    <img src="placeholder.svg" alt="Sanitary and Medical Pads"
+                        style="max-height: 250px; margin: 0 auto;" loading="lazy" decoding="async">
+                </div>
+                <div class="product-details">
+                    <span class="badge-soon">Samples arriving next week</span>
+                    <h3>Sanitary & Medical Pads</h3>
+                    <p style="color: var(--color-text-light);">Ultra-absorbent, hypoallergenic pads developed for
+                        personal hygiene and specific medical facility use. Built with advanced leak-lock technology and
+                        breathable materials for maximum comfort and safety.</p>
+
+                    <ul class="product-features">
+                        <li><strong>Use Cases:</strong> Pharmacies, Hospitals, Retail Supermarkets, and Corporate
+                            wellness initiatives.</li>
+                        <li><strong>Packaging Specs:</strong> Details to be confirmed upon sample approval. Compact
+                            retail and bulk hospital packaging anticipated.</li>
+                    </ul>
+
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#enquiry-form" class="btn btn-primary">Request Wholesale Quote</a>
+                        <a href="#enquiry-form" class="btn btn-outline">Become a Distributor</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Partner Trust Section -->
+    <section class="section" style="background-color: var(--color-navy); color: var(--color-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" style="color: var(--color-green);">The Supplier Advantage</span>
+                <h2 style="color: var(--color-white);">Why Partner With Elixion?</h2>
+            </div>
+
+            <div class="trust-grid">
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+                    <h3 style="color: var(--color-white); font-size: 1.25rem;">Reliable Supply Planning</h3>
+                    <p style="color: #A0AABF; font-size: 0.95rem;">Say goodbye to stockouts. We utilize data-backed
+                        production forecasting to guarantee your monthly required volumes are always met.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+                    <h3 style="color: var(--color-white); font-size: 1.25rem;">Professional Operations</h3>
+                    <p style="color: #A0AABF; font-size: 0.95rem;">From ordering to delivery, experience a streamlined,
+                        thoroughly corporate operational flow designed for B2B efficiency.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+                    <h3 style="color: var(--color-white); font-size: 1.25rem;">Clear Communication</h3>
+                    <p style="color: #A0AABF; font-size: 0.95rem;">Direct access to account managers, transparent lead
+                        times, and proactive logistical updates.</p>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                    <h3 style="color: var(--color-white); font-size: 1.25rem;">Quality-First Approach</h3>
+                    <p style="color: #A0AABF; font-size: 0.95rem;">Every product batch undergoes strict internal
+                        verification to ensure consistent structural and sanitary integrity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="enquiry-form" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Partnership Portal</span>
+                <h2>Wholesale & Distributor Enquiry</h2>
+                <p style="color: var(--color-text-light);">Secure your allocations early. Our sales team is ready to
+                    structure competitive bulk partnerships.</p>
+            </div>
+
+            <div class="form-container">
+                <form id="mfgForm" novalidate>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="mfgName" class="form-label">Full Name *</label>
+                            <input type="text" id="mfgName" class="form-control" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="mfgCompany" class="form-label">Company Name *</label>
+                            <input type="text" id="mfgCompany" class="form-control" required
+                                placeholder="Acme Healthcare Ltd">
+                        </div>
+                        <div class="form-group">
+                            <label for="mfgEmail" class="form-label">Email Address *</label>
+                            <input type="email" id="mfgEmail" class="form-control" required
+                                placeholder="john@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="mfgPhone" class="form-label">Phone / WhatsApp *</label>
+                            <input type="tel" id="mfgPhone" class="form-control" required
+                                placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="mfgInterest" class="form-label">Interest Type *</label>
+                        <select id="mfgInterest" class="form-control" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="wholesale">Wholesale Purchase (End User)</option>
+                            <option value="distributor">Distributor Partnership</option>
+                            <option value="retail">Retail Supply</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1.5rem;">
+                        <label class="form-label" style="margin-bottom: 0;">Product(s) of Interest *</label>
+                        <div class="checkbox-group" data-required-group="true">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="product" value="gloves"> Disposable Gloves
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="product" value="tissue"> Premium Tissue Paper
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="product" value="pads"> Sanitary & Medical Pads
+                            </label>
+                        </div>
+                        <div class="error-message">Please select at least one product.</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                        <div class="form-group">
+                            <label for="mfgQty" class="form-label">Estimated Monthly Quantity</label>
+                            <input type="text" id="mfgQty" class="form-control" placeholder="e.g. 500 Cartons">
+                        </div>
+                        <div class="form-group">
+                            <label for="mfgLocation" class="form-label">Delivery Location *</label>
+                            <input type="text" id="mfgLocation" class="form-control" required
+                                placeholder="City, State / Region">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 0.5rem;">
+                        <label for="mfgMessage" class="form-label">Additional Details or Questions</label>
+                        <textarea id="mfgMessage" class="form-control"
+                            placeholder="Tell us about your distribution network, current supply challenges, or specific packaging requirements..."
+                            rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem;">Submit
+                        Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" style="background-color: var(--color-off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Knowledge Base</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">When will the products be available?</button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            The initial samples for our gloves, tissue paper, and pads are arriving next week. Upon
+                            sample approval and finalization of packaging specs, mass production will commence. We
+                            anticipate full availability for bulk orders shortly thereafter.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">Do you accept distributor applications?</button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Yes, we are actively seeking motivated regional distributors. By filling out the enquiry
+                            form above and selecting "Distributor Partnership," our team will contact you to discuss
+                            territorial exclusivity, tiered pricing, and contractual terms.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">What is the minimum order quantity
+                        (MOQ)?</button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            MOQs will vary depending on the product line and the nature of the partnership (End-user vs.
+                            Distributor). Final MQOs will be published alongside physical samples, but our
+                            infrastructure is geared towards volume efficiency.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">Can you supply to multiple states or
+                        cities?</button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Yes, leveraging our Procurement & Sales logistics network, we have the capability to execute
+                            complex inter-state and multi-city delivery matrices securely and efficiently.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">Can I request product samples?</button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Absolutely. Once the physical samples clear our internal quality assurance protocols next
+                            week, authorized corporate buyers and vetted potential distributors will be eligible to
+                            receive sample kits for independent assessment.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">How do pricing and delivery work?</button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            Pricing is scaled based on volume commitments, with significant advantages provided to
+                            contracted distributors. Delivery frameworks are heavily customized per client, ranging from
+                            localized drop-shipping to bulk warehouse delivery. Submit an enquiry to get exact metrics
+                            for your location.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+                    <h4>Elixion Prime International Limited</h4>
+                    <p>Professional cleaning, fumigation, procurement, manufacturing, energy, and construction solutions across Lagos and Nigeria.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>&#128222; <a href="tel:+2349034168823">+234 903 416 8823</a></li>
+                        <li>&#9993; <a href="mailto:info@elixionprimeinternational.com">info@elixionprimeinternational.com</a></li>
+                        <li>&#128205; Lekki Epe Expressway, Lekki Phase 1, Lagos, Nigeria</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="https://wa.me/2349034168823" target="_blank" rel="noopener" aria-label="WhatsApp" style="font-size: 1.5rem;">📱</a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.5rem;">💼</a>
+                        <a href="#" aria-label="Facebook" style="font-size: 1.5rem;">🌐</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elixion Prime International Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/2349034168823" class="whatsapp-float" aria-label="Chat with Elixion on WhatsApp"
+        target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <script type="module" src="whatsapp.js" defer></script>
+    <script src="main.js" defer></script>
+    <script type="module" src="form.js" defer></script>
+</body>
+
+</html>

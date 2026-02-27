@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Elixion Prime International</title>
+    <meta name="description"
+        content="Learn about Elixion Prime International Limited, our mission, vision, and core values. A multi-division company delivering cleaning, fumigation, procurement, manufacturing, energy, and construction solutions.">
+
+    <!-- Open Graph Placeholders -->
+    <meta property="og:title" content="About Us - Elixion Prime International Limited">
+    <meta property="og:description"
+        content="A multi-division company delivering cleaning, fumigation, procurement, manufacturing, energy, and construction solutions.">
+    <meta property="og:image" content="placeholder.svg">
+    <meta property="og:url" content="https://www.elixionprime.com/about.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border-bottom: 4px solid var(--color-green);
+            height: 100%;
+        }
+
+        .quick-facts-card {
+            background-color: var(--color-navy-light);
+            color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .quick-facts-card h3 {
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--color-green);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .quick-facts-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .quick-facts-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .quick-facts-list li::before {
+            content: '→';
+            color: var(--color-green);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+        }
+
+        .quick-facts-list strong {
+            color: var(--color-green);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="manufacturing.html" class="nav-link">Manufacturing</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="#"
+                            onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
+                            class="btn btn-primary" style="margin-left: 1rem;">Request Quote</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Elixion Prime International Limited</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; color: #E0E0E0;">A multi-division company
+                delivering cleaning, fumigation, procurement, manufacturing, energy, and construction solutions.</p>
+        </div>
+    </section>
+
+    <!-- Company Overview -->
+    <section class="section">
+        <div class="container about-grid">
+            <div class="overview-text">
+                <span class="section-subtitle">Who We Are</span>
+                <h2>A Legacy of Quality and Trust</h2>
+                <p>Elixion Prime International Limited is a multidisciplinary corporate entity dedicated to providing
+                    top-tier solutions across facility management, procurement, manufacturing, energy, and construction
+                    sectors. We stand as a singular, trusted partner for enterprises looking to streamline operations
+                    and guarantee uncompromising quality.</p>
+                <p>Founded on the principles of integrity and operational excellence, we have grown to become a reliable
+                    force for businesses and institutions seeking high-quality service delivery. Our diverse
+                    portfolio allows us to offer integrated solutions, reducing complexity for our clients and ensuring
+                    consistent standards across all organizational operations, from the boardroom to the industrial
+                    floor.</p>
+            </div>
+
+            <div class="quick-facts-card">
+                <h3>Quick Facts</h3>
+                <ul class="quick-facts-list">
+                    <li><strong>Core Divisions:</strong> Cleaning, Fumigation, Procurement & Sales, Manufacturing,
+                        Energy, Construction</li>
+                    <li><strong>Service Focus:</strong> Uncompromising quality, rigorous safety protocols, reliable
+                        delivery, and professional execution.</li>
+                    <li><strong>Manufacturing Pipeline:</strong> High-grade medical and industrial consumables including
+                        gloves, tissue paper, and pads (samples arriving next week).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision & Values -->
+    <section class="section" style="background-color: var(--color-off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Foundation</span>
+                <h2>Vision, Mission & Values</h2>
+            </div>
+            <div class="value-cards">
+                <div class="value-card">
+                    <h3 style="color: var(--color-navy); margin-bottom: 1rem;">Our Vision</h3>
+                    <p>To be universally recognized as the premier multidisciplinary service and manufacturing
+                        conglomerate, establishing global standards for quality, innovation, and sustainable practices
+                        in every sector we operate.</p>
+                </div>
+                <div class="value-card">
+                    <h3 style="color: var(--color-navy); margin-bottom: 1rem;">Our Mission</h3>
+                    <p>To empower businesses by delivering integrated, safe, and customer-centered operational
+                        solutions. We strive to be the invisible force that keeps our clients' enterprises running
+                        flawlessly with a supreme focus on quality and safety.</p>
+                </div>
+                <div class="value-card">
+                    <h3 style="color: var(--color-navy); margin-bottom: 1rem;">Our Values</h3>
+                    <p><strong>Integrity:</strong> Ethical practices in all client relationships.<br>
+                        <strong>Safety:</strong> Wellbeing of staff and clients is paramount.<br>
+                        <strong>Excellence:</strong> Refusing to settle for average.<br>
+                        <strong>Reliability:</strong> Consistent, timely execution.<br>
+                        <strong>Innovation:</strong> Investing in new efficiencies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Divisions Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Do</span>
+                <h2>Our Divisions</h2>
+                <p style="color: var(--color-text-light);">Six pillars of operational excellence supporting your
+                    enterprise.</p>
+            </div>
+            <div class="card-grid">
+                <a href="services.html" class="card">
+                    <img src="placeholder.svg" alt="Cleaning Services" class="card-img" loading="lazy" decoding="async">
+                    <div class="card-body">
+                        <h3 class="card-title">Cleaning & Facility Services</h3>
+                        <p class="card-text">Corporate, industrial, and post-construction cleaning.</p>
+                    </div>
+                </a>
+                <a href="services.html" class="card">
+                    <img src="placeholder.svg" alt="Fumigation" class="card-img" loading="lazy" decoding="async">
+                    <div class="card-body">
+                        <h3 class="card-title">Fumigation & Pest Control</h3>
+                        <p class="card-text">Safe and effective pest management strategies.</p>
+                    </div>
+                </a>
+                <a href="services.html" class="card">
+                    <img src="placeholder.svg" alt="Procurement" class="card-img" loading="lazy" decoding="async">
+                    <div class="card-body">
+                        <h3 class="card-title">Procurement & Sales</h3>
+                        <p class="card-text">Sourcing and logistics for premium supplies.</p>
+                    </div>
+                </a>
+                <a href="manufacturing.html" class="card">
+                    <img src="placeholder.svg" alt="Manufacturing" class="card-img" loading="lazy" decoding="async">
+                    <div class="card-body">
+                        <h3 class="card-title">Manufacturing</h3>
+                        <p class="card-text">Medical & Industrial Consumables production.</p>
+                    </div>
+                </a>
+                <a href="services.html" class="card">
+                    <img src="placeholder.svg" alt="Energy" class="card-img" loading="lazy" decoding="async">
+                    <div class="card-body">
+                        <h3 class="card-title">Energy</h3>
+                        <p class="card-text">Sustainable power and infrastructure solutions.</p>
+                    </div>
+                </a>
+                <a href="services.html" class="card">
+                    <img src="placeholder.svg" alt="Construction" class="card-img" loading="lazy" decoding="async">
+                    <div class="card-body">
+                        <h3 class="card-title">Construction</h3>
+                        <p class="card-text">Project management from planning to execution.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality, Safety & Compliance -->
+    <section class="section" style="background-color: var(--color-off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Trust & Reliability</span>
+                <h2>Quality, Safety & Compliance</h2>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--color-text-light);">We prioritize safe chemical
+                    handling, mandatory PPE use, and continuous training for our personnel. Our structured process
+                    guarantees compliance with local and international health standards.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="timeline-step">
+                    <div class="step-marker">1</div>
+                    <h3>Assess</h3>
+                    <p>Thorough site evaluation to identify specific needs, risks, and required resources.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-marker">2</div>
+                    <h3>Plan</h3>
+                    <p>Development of a customized, compliant strategy detailing schedules, equipment, and safety
+                        protocols.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-marker">3</div>
+                    <h3>Execute</h3>
+                    <p>Implementation by trained professionals utilizing appropriate PPE and specialized tools.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-marker">4</div>
+                    <h3>Inspect</h3>
+                    <p>Rigorous quality assurance checks to verify work meets our uncompromising standards.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-marker">5</div>
+                    <h3>Report</h3>
+                    <p>Delivery of transparent documentation and client wrap-up for total peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Strip -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Need professional support for your facility or supply needs?</h2>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="#"
+                    onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
+                    class="btn btn-primary">Request a Quote</a>
+                <a href="services.html" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+                    <h4>Elixion Prime International Limited</h4>
+                    <p>Professional cleaning, fumigation, procurement, manufacturing, energy, and construction solutions across Lagos and Nigeria.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>&#128222; <a href="tel:+2349034168823">+234 903 416 8823</a></li>
+                        <li>&#9993; <a href="mailto:info@elixionprimeinternational.com">info@elixionprimeinternational.com</a></li>
+                        <li>&#128205; Lekki Epe Expressway, Lekki Phase 1, Lagos, Nigeria</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="https://wa.me/2349034168823" target="_blank" rel="noopener" aria-label="WhatsApp" style="font-size: 1.5rem;">📱</a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.5rem;">💼</a>
+                        <a href="#" aria-label="Facebook" style="font-size: 1.5rem;">🌐</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elixion Prime International Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/2349034168823" class="whatsapp-float" aria-label="Chat with Elixion on WhatsApp"
+        target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <script type="module" src="whatsapp.js" defer></script>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

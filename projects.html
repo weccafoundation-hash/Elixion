@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects & Portfolio | Elixion Prime</title>
+    
+
+    <meta property="og:title" content="Projects - Elixion Prime">
+    <meta property="og:description" content="A snapshot of our corporate impact and service delivery across Nigeria.">
+    <meta property="og:image" content="placeholder.svg">
+    <meta property="og:url" content="https://www.elixionprime.com/projects.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="manufacturing.html" class="nav-link">Manufacturing</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="#"
+                            onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
+                            class="btn btn-primary" style="margin-left: 1rem;">Request Quote</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Projects & Experience</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; color: #E0E0E0;">A snapshot of how we
+                deliver professional cleaning, fumigation, procurement, and operational support.</p>
+        </div>
+    </section>
+
+    <!-- Project Filter & Grid -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cleaning">Cleaning</button>
+                <button class="filter-btn" data-filter="fumigation">Fumigation</button>
+                <button class="filter-btn" data-filter="procurement">Procurement</button>
+                <button class="filter-btn" data-filter="manufacturing">Manufacturing Support</button>
+                <button class="filter-btn" data-filter="construction">Construction Support</button>
+                <button class="filter-btn" data-filter="energy">Energy Support</button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="card-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card" data-category="cleaning">
+                    <img src="placeholder.svg" alt="Office Cleaning" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Cleaning</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Office Deep Cleaning & Maintenance Plan
+                        </h3>
+                        <div class="project-location">📍 Victoria Island, Lagos</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Daily janitorial maintenance of an 8-story corporate headquarters.</li>
+                                <li>Intensive weekend carpet and upholstery extraction.</li>
+                                <li>Waste management coordination.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Perfect hygienic standards with zero operational
+                            disruptions.</div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="construction">
+                    <img src="placeholder.svg" alt="Construction Cleanup" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Construction Support</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Post-Construction Commercial Cleanup</h3>
+                        <div class="project-location">📍 Ikeja, Lagos</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Removal of heavy construction debris from a newly built mall.</li>
+                                <li>Industrial floor scrubbing and polishing prior to handover.</li>
+                                <li>Hazardous material disposal compliance.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Site handed over to anchor tenants 2 days ahead of
+                            schedule.</div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="fumigation">
+                    <img src="placeholder.svg" alt="Estate Fumigation" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Fumigation</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Estate-wide Pest Eradication</h3>
+                        <div class="project-location">📍 Lekki Phase 1, Lagos</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Comprehensive vector control for a 150-unit residential estate.</li>
+                                <li>Application of eco-friendly, non-toxic residual sprays.</li>
+                                <li>Ongoing quarterly monitoring program.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Complete structural protection with 100% human and pet
+                            safety.</div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="fumigation">
+                    <img src="placeholder.svg" alt="Restaurant Pest Control" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Fumigation</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Food Safety & Pest Maintenance</h3>
+                        <div class="project-location">📍 Abuja, FCT</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Intensive rodent and insect exclusion for a multi-chain restaurant group.</li>
+                                <li>Weekly FDA-compliant inspection routing.</li>
+                                <li>Sanitization of core prep areas.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Maintained 'A' Grade health compliance standard across 4
+                            branches.</div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="procurement">
+                    <img src="placeholder.svg" alt="Bulk Consumables" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Procurement</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Facility Consumables Bulk Supply</h3>
+                        <div class="project-location">📍 Port Harcourt, Rivers State</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Sourcing and logistics for tissue, sanitizers, and bin liners.</li>
+                                <li>Monthly recurring supply contract for a major hospital.</li>
+                                <li>Stock-level monitoring and automated replenishment.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Reduced client procurement overhead by 15%.</div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="manufacturing">
+                    <img src="placeholder.svg" alt="Industrial Consumables" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Manufacturing Support</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Industrial PPE & Safety Coordination</h3>
+                        <div class="project-location">📍 Agbara Industrial Estate</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Direct supply of high-tensile safety gloves to a bottling plant.</li>
+                                <li>Sourcing industrial grades of cleaning solvents.</li>
+                                <li>Inventory buffering for continuous production.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Eradicated PPE-related operational delays.</div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card" data-category="cleaning">
+                    <img src="placeholder.svg" alt="Multi-site Cleaning" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Cleaning</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Bank Branch Cleaning Operations</h3>
+                        <div class="project-location">📍 Nationwide</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Standardized morning cleaning routines for 15+ retail bank branches.</li>
+                                <li>High-touch point sanitization (ATMs, door handles).</li>
+                                <li>Unified quality reporting to central facilities management.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Unified cleanliness standards across the regional network.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card" data-category="energy">
+                    <img src="placeholder.svg" alt="Energy Support" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Energy Support</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Remote Site Facilities Setup</h3>
+                        <div class="project-location">📍 Niger Delta Region</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Logistics coordination for camp setup supplies.</li>
+                                <li>Initial deep cleaning of portable office cabins.</li>
+                                <li>Sourcing of solar lighting parameters for perimeter.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Accelerated site readiness for engineering deployment.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card" data-category="construction">
+                    <img src="placeholder.svg" alt="General Construction Support" class="card-img" loading="lazy" decoding="async">
+                    <div class="project-body">
+                        <span class="project-tag">Construction Support</span>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.15rem;">Site Material Logistics</h3>
+                        <div class="project-location">📍 Eko Atlantic, Lagos</div>
+                        <div class="project-scope">
+                            <ul>
+                                <li>Sourcing secondary building components and safety gear.</li>
+                                <li>On-site waste segregation and daily removal.</li>
+                                <li>Temporary facility sanitization for workers.</li>
+                            </ul>
+                        </div>
+                        <div class="project-outcome">Outcome: Maintained structural flow and site safety compliance.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="section" style="background-color: var(--color-off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Data-Driven Excellence</span>
+                <h2>How We Measure Quality</h2>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📋</div>
+                    <div class="metric-title">Inspection Checklists</div>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 0.5rem;">Digital daily
+                        auditing ensures every task meets our strict corporate standards.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">⏱️</div>
+                    <div class="metric-title">Response Time</div>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 0.5rem;">Rapid mobilization
+                        for critical requests and emergency operational support.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🛡️</div>
+                    <div class="metric-title">Safety Compliance</div>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 0.5rem;">Total adherence to
+                        occupational health and hazard protocols.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">⭐</div>
+                    <div class="metric-title">Client Feedback</div>
+                    <p style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 0.5rem;">Frequent reviews
+                        to dynamically adapt services to evolving facility needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Proof of Impact</span>
+                <h2>What Operations Leaders Say</h2>
+                <p style="color: var(--color-text-light);">*Client confidentiality is strictly respected across all our
+                    engagements.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">Elixion Prime transformed how we handle our building's hygiene. Their
+                        team is discreet, professional, and the consistency is unmatched.</p>
+                    <div class="testimonial-author">— Facility Manager, CorporateHQ</div>
+                </div>
+                <!-- 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">Managing procurement for our regional offices used to be a nightmare
+                        before Elixion took over. We haven't had a single stockout since.</p>
+                    <div class="testimonial-author">— Head of Operations, Logistics Firm</div>
+                </div>
+                <!-- 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">The post-construction cleanup was executed precisely on the timeline.
+                        They handled the debris safely so our tenants could move in.</p>
+                    <div class="testimonial-author">— Property Developer</div>
+                </div>
+                <!-- 4 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">Their fumigation program finally solved an ongoing issue at our estate
+                        without causing any alarm or danger to the residents' pets.</p>
+                    <div class="testimonial-author">— Estate Chair, Residential Management</div>
+                </div>
+                <!-- 5 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">We rely on Elixion for our industrial safety supplies. The quality is
+                        reliable, and they always meet our heavy demands.</p>
+                    <div class="testimonial-author">— Plant Supervisor, Manufacturing Unit</div>
+                </div>
+                <!-- 6 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">Our clinic requires hospital-grade sanitation. Elixion's teams clearly
+                        understand the regulatory requirements for medical environments.</p>
+                    <div class="testimonial-author">— Operations Director, Healthcare Group</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner" style="background-color: var(--color-green);">
+        <div class="container">
+            <h2>Want a service plan tailored to your facility?</h2>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="#"
+                    onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
+                    class="btn btn-navy" style="background-color: var(--color-navy); color: var(--color-white);">Request
+                    a Quote</a>
+                <a href="services.html" class="btn btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+                    <h4>Elixion Prime International Limited</h4>
+                    <p>Professional cleaning, fumigation, procurement, manufacturing, energy, and construction solutions across Lagos and Nigeria.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>&#128222; <a href="tel:+2349034168823">+234 903 416 8823</a></li>
+                        <li>&#9993; <a href="mailto:info@elixionprimeinternational.com">info@elixionprimeinternational.com</a></li>
+                        <li>&#128205; Lekki Epe Expressway, Lekki Phase 1, Lagos, Nigeria</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="https://wa.me/2349034168823" target="_blank" rel="noopener" aria-label="WhatsApp" style="font-size: 1.5rem;">📱</a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.5rem;">💼</a>
+                        <a href="#" aria-label="Facebook" style="font-size: 1.5rem;">🌐</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elixion Prime International Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/2349034168823" class="whatsapp-float" aria-label="Chat with Elixion on WhatsApp"
+        target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <script type="module" src="whatsapp.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="projects.js"></script>
+</body>
+
+</html>

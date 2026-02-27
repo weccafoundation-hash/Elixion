@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Elixion Prime International</title>
+    
+
+    <meta property="og:title" content="Contact - Elixion Prime">
+    <meta property="og:description" content="Request a tailored service quote today.">
+    <meta property="og:image" content="placeholder.svg">
+    <meta property="og:url" content="https://www.elixionprime.com/contact.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="manufacturing.html" class="nav-link">Manufacturing</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="#"
+                            onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
+                            class="btn btn-primary active" style="margin-left: 1rem;">Request
+                            Quote</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Elixion</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; color: #E0E0E0;">Contact Elixion Prime International Limited — Professional Cleaning, Fumigation, Procurement & Manufacturing Solutions in Lagos.</p>
+        </div>
+    </section>
+
+    <!-- Contact Cards Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Card 1: Phone -->
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--color-navy);">Phone / WhatsApp</h3>
+                    <p style="color: var(--color-text-light);">We are available during business hours.</p>
+                    <a href="tel:+2349034168823" style="color: var(--color-green); font-weight: 600; margin-top: 1rem; display: block;">+234 903 416 8823</a>
+                    <a href="https://wa.me/2349034168823" target="_blank" rel="noopener" style="display:inline-block; margin-top:0.5rem; font-size:0.9rem; color: #25D366; font-weight: bold;">Chat on WhatsApp ></a>
+                </div>
+                <!-- Card 2: Email -->
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--color-navy);">Email</h3>
+                    <p style="color: var(--color-text-light);">We aim to reply within 24 hours.</p>
+                    <a href="mailto:info@elixionprimeinternational.com"
+                        style="color: var(--color-green); font-weight: 600; margin-top: 1rem; display: inline-block;">info@elixionprimeinternational.com</a>
+                </div>
+                <!-- Card 3: Address -->
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--color-navy);">Address</h3>
+                    <p style="color: var(--color-text-light);">Visit our official headquarters.</p>
+                    <span style="color: var(--color-green); font-weight: 600; margin-top: 1rem; display: inline-block;">
+                        Lekki Epe Expressway,<br>
+                        Lekki Phase 1,<br>
+                        Lagos, Nigeria
+                    </span>
+                </div>
+                <!-- Card 4: Service Coverage -->
+                <div class="contact-card">
+                    <div class="contact-icon">🌍</div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--color-navy);">Service Coverage</h3>
+                    <p style="color: var(--color-text-light);">Supporting clients across the nation.</p>
+                    <span style="color: var(--color-green); font-weight: 600; margin-top: 1rem; display: inline-block;">
+                        Serving Lagos and nationwide projects upon request.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Form & Coverage -->
+    <section class="section" style="background-color: var(--color-off-white);">
+        <div class="container"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;">
+
+            <!-- Left: Form -->
+            <div class="form-container"
+                style="background-color: var(--color-white); padding: 3rem; border-radius: 8px; box-shadow: var(--shadow-md);">
+                <h2 style="margin-bottom: 0.5rem; color: var(--color-navy);">Request a Quote</h2>
+                <p style="margin-bottom: 2rem; color: var(--color-text-light);">Provide your details and we will route
+                    your request to the appropriate division leader.</p>
+
+                <form id="quoteForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span style="color:red">*</span></label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Organization</label>
+                            <input type="text" id="company" name="company" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address <span
+                                    style="font-weight:normal; font-size:0.85rem; color:var(--color-text-light);">(Required
+                                    if no phone)</span></label>
+                            <input type="email" id="email" name="email" class="form-control conditional-contact">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp <span
+                                    style="font-weight:normal; font-size:0.85rem; color:var(--color-text-light);">(Required
+                                    if no email)</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-control conditional-contact">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceType">Service Needed <span style="color:red">*</span></label>
+                            <select id="serviceType" name="serviceType" class="form-control" required>
+                                <option value="" disabled selected>Select a primary service</option>
+                                <option value="cleaning">Professional Cleaning</option>
+                                <option value="fumigation">Fumigation & Pest Control</option>
+                                <option value="procurement">Procurement (Consumables)</option>
+                                <option value="manufacturing">Manufacturing Supply</option>
+                                <option value="energy">Energy Support</option>
+                                <option value="construction">Construction Support</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location <span style="color:red">*</span></label>
+                            <input type="text" id="location" name="location" class="form-control"
+                                placeholder="e.g. Lekki, Lagos" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Budget Range <span
+                                    style="font-weight:normal; font-size:0.85rem; color:var(--color-text-light);">(Optional)</span></label>
+                            <select id="budget" name="budget" class="form-control">
+                                <option value="" disabled selected>Select estimated budget</option>
+                                <option value="under_100k">Under ₦100k</option>
+                                <option value="100k_to_500k">₦100k – ₦500k</option>
+                                <option value="500k_to_2m">₦500k – ₦2m</option>
+                                <option value="2m_plus">₦2m+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Start Date <span
+                                    style="font-weight:normal; font-size:0.85rem; color:var(--color-text-light);">(Optional)</span></label>
+                            <input type="date" id="date" name="preferredDate" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="message">Project Context / Message <span style="color:red">*</span></label>
+                        <textarea id="message" name="message" class="form-control" rows="4"
+                            placeholder="Tell us about the scope of your request..." required></textarea>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label class="checkbox-label" style="align-items: flex-start;">
+                            <input type="checkbox" name="consent" style="margin-top: 4px;" required>
+                            <span>I agree to be contacted by Elixion Prime regarding this request and accept the
+                                processing of my data in accordance with privacy guidelines. <span
+                                    style="color:red">*</span></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 1rem;">Submit
+                        Request</button>
+                </form>
+            </div>
+
+            <!-- Right: Map / Service Coverage -->
+            <div class="coverage-container">
+                <div style="margin-bottom: 2rem;">
+                    <h2 style="margin-bottom: 1rem; color: var(--color-navy);">Service Coverage</h2>
+                    <p style="color: var(--color-text-light); line-height: 1.6; font-size: 1.1rem;">
+                        Elixion Prime operates a highly mobile and strictly coordinated operational structure.
+                        While headquartered in <strong>Lagos, Nigeria</strong>, our logistics and procurement networks
+                        enable us to deploy teams and deliver bulk supplies <strong>nationwide upon request</strong>.
+                    </p>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div
+                    style="width: 100%; height: 350px; background-color: #E0E0E0; border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 2px dashed #BDBDBD; margin-bottom: 3rem;">
+                    <div style="text-align: center; color: #757575;">
+                        <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">🗺️</span>
+                        <span style="font-weight: 600; font-size: 1.2rem;">Map Placeholder</span><br>
+                        <span>(Embed Google Maps iframe here)</span>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h3 style="margin-bottom: 1.5rem; color: var(--color-navy);">Explore Our Divisions</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="services.html" class="btn btn-secondary"
+                            style="justify-content: space-between;">Professional Services <span>→</span></a>
+                        <a href="manufacturing.html" class="btn btn-secondary"
+                            style="justify-content: space-between;">Manufacturing & Supply <span>→</span></a>
+                        <a href="industries.html" class="btn btn-secondary"
+                            style="justify-content: space-between;">Industries Supported <span>→</span></a>
+                        <a href="projects.html" class="btn btn-secondary" style="justify-content: space-between;">Review
+                            Our Projects <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="logo.png" alt="Elixion Prime logo"></a>
+                    <h4>Elixion Prime International Limited</h4>
+                    <p>Professional cleaning, fumigation, procurement, manufacturing, energy, and construction solutions across Lagos and Nigeria.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>&#128222; <a href="tel:+2349034168823">+234 903 416 8823</a></li>
+                        <li>&#9993; <a href="mailto:info@elixionprimeinternational.com">info@elixionprimeinternational.com</a></li>
+                        <li>&#128205; Lekki Epe Expressway, Lekki Phase 1, Lagos, Nigeria</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="https://wa.me/2349034168823" target="_blank" rel="noopener" aria-label="WhatsApp" style="font-size: 1.5rem;">📱</a>
+                        <a href="#" aria-label="LinkedIn" style="font-size: 1.5rem;">💼</a>
+                        <a href="#" aria-label="Facebook" style="font-size: 1.5rem;">🌐</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elixion Prime International Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/2349034168823" class="whatsapp-float" aria-label="Chat with Elixion on WhatsApp"
+        target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <script type="module" src="whatsapp.js" defer></script>
+    <script src="main.js" defer></script>
+    <script type="module" src="form.js" defer></script>
+</body>
+
+</html>
