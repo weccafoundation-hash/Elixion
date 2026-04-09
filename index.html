@@ -36,78 +36,161 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="components.css">
+  
+  <!-- Premium Homepage Overrides -->
   <style>
     .hero {
-      background-image: url('hero-bg.png');
-      background-size: cover;
-      background-position: center;
-      padding: 8rem 0;
-      color: var(--color-white);
+      position: relative;
+      background-image: linear-gradient(to right, rgba(2, 26, 63, 0.95) 0%, rgba(2, 26, 63, 0.7) 60%, rgba(2, 26, 63, 0.3) 100%), url('hero-bg.png') !important;
+      background-size: cover !important;
+      background-position: center !important;
+      padding: clamp(8rem, 15vw, 12rem) 0;
+      color: var(--color-white) !important;
     }
 
     .hero-content {
-      max-width: 700px;
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
     }
 
     .hero h1 {
-      color: var(--color-white);
-      font-size: 3.5rem;
+      color: var(--color-white) !important;
+      font-size: clamp(3rem, 6vw, 4.5rem);
       margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      text-wrap: balance;
     }
 
     .hero p {
       font-size: 1.25rem;
       margin-bottom: 2.5rem;
-      color: #A0AABF;
+      color: #D3D9E6 !important;
+      max-width: 600px;
+      line-height: 1.7;
     }
 
     .hero-btns {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
+    }
+
+    .hero-btns .btn {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
     }
 
     .features-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
     }
 
     .feature-item {
       background: var(--color-white);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow-sm);
-      text-align: center;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(2, 26, 63, 0.05);
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(212, 168, 67, 0.1);
+      transition: all 0.4s ease;
+    }
+
+    .feature-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--color-gold);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.4s ease;
+    }
+
+    .feature-item:hover::before {
+      transform: scaleY(1);
+      transform-origin: top;
     }
 
     .feature-icon {
-      font-size: 3rem;
-      color: var(--color-green);
-      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(212, 168, 67, 0.1);
+      font-size: 1.75rem;
+      color: var(--color-gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-primary);
+    }
+    
+    .feature-item p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
     }
 
     .testimonials {
-      background-color: var(--color-navy-light);
-      color: var(--color-white);
+      background-color: var(--color-primary) !important;
+      color: var(--color-white) !important;
+      position: relative;
+    }
+
+    .testimonials .section-subtitle,
+    .testimonials h2 {
+      color: var(--color-white) !important;
     }
 
     .testimonial-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03) !important;
+      backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(212, 168, 67, 0.3) !important;
     }
 
     .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.7;
       font-style: italic;
       margin-bottom: 1.5rem;
-      color: #E0E0E0;
+      color: #E0E0E0 !important;
+      position: relative;
     }
 
     .testimonial-author {
       font-weight: 600;
-      color: var(--color-green);
+      color: var(--color-gold) !important;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .testimonial-author::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: var(--color-gold);
     }
   </style>
 </head>
@@ -116,7 +199,7 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="container nav-container">
+    <div class="container nav-container" style="position: relative;">
       <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
@@ -300,33 +383,33 @@
   <section class="section testimonials">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle" style="color: var(--color-white);">Client Feedback</span>
-        <h2 style="color: var(--color-white);">What Our Clients Say</h2>
+        <span class="section-subtitle">Client Feedback</span>
+        <h2>What Our Clients Say</h2>
       </div>
       <div class="card-grid">
-        <div class="testimonial-card">
+        <div class="testimonial-card premium-animate-up premium-delay-1">
           <p class="testimonial-text">"Elixion Prime transformed our facility management. Their cleaning and fumigation
             teams are incredibly thorough and professional."</p>
-          <p class="testimonial-author">- Operations Manager, TechCorp</p>
+          <div class="testimonial-author">Operations Manager, TechCorp</div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card premium-animate-up premium-delay-2">
           <p class="testimonial-text">"Reliable procurement is hard to find. Elixion has consistently delivered our
             industrial supplies on time and within budget."</p>
-          <p class="testimonial-author">- Procurement Director, Zenith Logistics</p>
+          <div class="testimonial-author">Procurement Director, Zenith Logistics</div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card premium-animate-up premium-delay-3">
           <p class="testimonial-text">"Their energy and construction divisions handled our new warehouse build
             flawlessly. Excited for their upcoming manufacturing products."</p>
-          <p class="testimonial-author">- CEO, BuildRight Ventures</p>
+          <div class="testimonial-author">CEO, BuildRight Ventures</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Final CTA -->
-  <section class="cta-banner">
+  <section class="cta-banner" style="background-color: var(--color-off-white) !important; color: var(--color-text-main) !important;">
     <div class="container">
-      <h2>Ready to elevate your operational standards?</h2>
+      <h2 style="color: var(--color-navy) !important;">Ready to elevate your operational standards?</h2>
       <a href="#"
         onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
         class="btn btn-primary">Get a Custom Quote</a>
@@ -390,6 +473,212 @@
 
   <script type="module" src="whatsapp.js" defer></script>
   <script src="main.js" defer></script>
+  
+  <!-- Premium Enhancements & Animations -->
+  <style>
+    /* 
+    1. Premium Header Layout & Breakout Logo Positioning 
+    */
+    .header {
+        background: rgba(2, 26, 63, 0.9) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 80px; /* matches nav-container */
+        width: 140px; /* space strictly for logo */
+    }
+
+    .logo img {
+        position: absolute;
+        top: 20px; /* Push slightly down so it overlaps creatively below the 80px header */
+        height: 120px !important;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s !important;
+        transform-origin: top left;
+        filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        z-index: 1001; /* Stay above hero */
+    }
+
+    /* Small screens: tone down logo overlap */
+    @media (max-width: 768px) {
+        .logo img {
+            height: 80px !important;
+            top: 50%;
+            transform: translateY(-50%) !important;
+        }
+    }
+
+    .footer-logo img {
+        height: 100px !important;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        transform-origin: center center;
+    }
+
+        .logo img {
+        /* Premium Background Hover Mechanics */
+        border-radius: 100px;
+        padding: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s, background-color 0.4s, padding 0.4s !important;
+    }
+
+    .logo img:hover {
+        transform: scale(1.05) !important;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .footer-logo img:hover {
+        transform: scale(1.05) !important;
+    }
+
+    /* 2. Advanced Button "Shine" Animation */
+    .btn-primary {
+        background: var(--color-gold) !important;
+        color: var(--color-primary) !important;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transform-style: preserve-3d;
+        border: none;
+        box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(212, 168, 67, 0.4);
+    }
+
+    .btn-primary::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-25deg);
+        animation: shine 4s infinite;
+        z-index: -1;
+    }
+
+    .hero .btn-secondary {
+        border-color: rgba(255,255,255,0.4) !important;
+        color: #fff !important;
+        backdrop-filter: blur(4px);
+    }
+    
+    .hero .btn-secondary:hover {
+        background: #fff !important;
+        color: var(--color-primary) !important;
+    }
+
+    @keyframes shine {
+        0% { left: -100%; }
+        20% { left: 200%; }
+        100% { left: 200%; }
+    }
+
+    /* 3. Advanced Card 3D Hover & Micro-interactions */
+    .card {
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+        will-change: transform;
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .card .card-img {
+        transition: transform 0.6s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(2, 26, 63, 0.08), 0 5px 15px rgba(2, 26, 63, 0.05);
+        border-color: rgba(212, 168, 67, 0.3);
+    }
+    
+    .card:hover .card-img {
+        transform: scale(1.05);
+    }
+
+    /* 4. Scroll Animations */
+    .premium-animate-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
+    }
+
+    .premium-animate-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .premium-delay-1 { transition-delay: 0.1s; }
+    .premium-delay-2 { transition-delay: 0.2s; }
+    .premium-delay-3 { transition-delay: 0.3s; }
+    .premium-delay-4 { transition-delay: 0.4s; }
+
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    .card-img {
+        background: var(--color-off-white);
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Setup Elements for Animation
+        const targets = document.querySelectorAll('.section-subtitle, h2, .card, .feature-item, .testimonial-card');
+
+        targets.forEach((el, index) => {
+            el.classList.add('premium-animate-up');
+            // Staggered delay logic
+            if (el.parentElement && (el.parentElement.classList.contains('card-grid') || el.parentElement.classList.contains('features-list'))) {
+                const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
+                const delayClass = 'premium-delay-' + ((siblingIndex % 4) + 1);
+                el.classList.add(delayClass);
+            }
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -10% 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.premium-animate-up').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                setTimeout(() => { el.classList.add('is-visible'); }, 50);
+            } else {
+                observer.observe(el);
+            }
+        });
+    });
+  </script>
 </body>
 
 </html>

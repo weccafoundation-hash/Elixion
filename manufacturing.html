@@ -33,13 +33,7 @@
             }
         }
 
-        .capabilities-card {
-            background-color: var(--color-navy-light);
-            color: var(--color-white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-lg);
-        }
+        
 
         .capabilities-list {
             list-style: none;
@@ -54,12 +48,7 @@
             color: #E0E0E0;
         }
 
-        .capabilities-list li::before {
-            content: '⚙️';
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+        
 
         .trust-grid {
             display: grid;
@@ -67,14 +56,92 @@
             gap: 2rem;
             text-align: center;
         }
-    </style>
+    
+        /* Premium Page Overrides */
+        .page-hero {
+            position: relative;
+            background-color: var(--color-primary) !important;
+            background-image: linear-gradient(to right, rgba(2, 26, 63, 0.95) 0%, rgba(2, 26, 63, 0.8) 100%), url('hero-bg.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            padding: clamp(8rem, 12vw, 10rem) 0 clamp(4rem, 6vw, 6rem) !important;
+            color: var(--color-white) !important;
+            margin-top: -80px; /* Pull up behind the transparent header */
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: var(--color-white) !important;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .capabilities-card {
+            background-color: var(--color-navy-light);
+            color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(2, 26, 63, 0.15) !important;
+            border: 1px solid rgba(212, 168, 67, 0.2);
+        }
+        
+        .capabilities-list li::before {
+            content: '\2713';
+            color: var(--color-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0px;
+        }
+        
+        .product-block {
+            background-color: var(--color-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 992px) {
+            .product-block {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .product-block:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(2, 26, 63, 0.08);
+            border-color: rgba(212, 168, 67, 0.3);
+        }
+        
+        .product-img-wrapper img {
+            transition: transform 0.6s ease;
+        }
+        
+        .product-block:hover .product-img-wrapper img {
+            transform: scale(1.05);
+        }
+</style>
 </head>
 
 <body>
 
     <!-- Header -->
     <header class="header">
-        <div class="container nav-container">
+        <div class="container nav-container" style="position: relative;">
             <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
             <nav aria-label="Main Navigation">
                 <ul class="nav-menu">
@@ -122,7 +189,7 @@
 
             <div class="capabilities-card">
                 <h3
-                    style="color: var(--color-white); margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-green); padding-bottom: 0.5rem; display: inline-block;">
+                    style="color: var(--color-white); margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-gold); padding-bottom: 0.5rem; display: inline-block;">
                     Production Capabilities</h3>
                 <ul class="capabilities-list">
                     <li><strong>Product Development:</strong> Rigorous materials testing and sampling phases currently
@@ -236,7 +303,7 @@
     <section class="section" style="background-color: var(--color-navy); color: var(--color-white);">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle" style="color: var(--color-green);">The Supplier Advantage</span>
+                <span class="section-subtitle" style="color: var(--color-gold);">The Supplier Advantage</span>
                 <h2 style="color: var(--color-white);">Why Partner With Elixion?</h2>
             </div>
 
@@ -490,6 +557,231 @@
     <script type="module" src="whatsapp.js" defer></script>
     <script src="main.js" defer></script>
     <script type="module" src="form.js" defer></script>
+<!-- Premium Enhancements -->
+<style>
+    
+
+    
+    /* Premium Header Layout & Breakout Logo Positioning */
+    .header {
+        background: rgba(2, 26, 63, 0.9) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 80px; 
+        width: 140px; 
+    }
+
+    .logo img {
+        position: absolute;
+        top: 20px; 
+        height: 120px !important;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s !important;
+        transform-origin: top left;
+        filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+        z-index: 1001; 
+    }
+
+    @media (max-width: 768px) {
+        .logo img {
+            height: 80px !important;
+            top: 50%;
+            transform: translateY(-50%) !important;
+        }
+    }
+
+    .footer-logo img {
+        height: 100px !important;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        transform-origin: center center;
+    }
+
+        .logo img {
+        /* Premium Background Hover Mechanics */
+        border-radius: 100px;
+        padding: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s, background-color 0.4s, padding 0.4s !important;
+    }
+
+    .logo img:hover {
+        transform: scale(1.05) !important;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .footer-logo img:hover {
+        transform: scale(1.05) !important;
+    }
+
+    .nav-link {
+        color: #fff !important; 
+        opacity: 0.9;
+    }
+    .nav-link:hover, .nav-link.active {
+        color: var(--color-gold) !important;
+        opacity: 1;
+    }
+
+
+    /* 3. Advanced Button "Shine" Animation */
+    .btn-primary {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transform-style: preserve-3d;
+    }
+
+    .btn-primary::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-25deg);
+        animation: shine 4s infinite;
+        z-index: -1;
+    }
+
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+
+        20% {
+            left: 200%;
+        }
+
+        100% {
+            left: 200%;
+        }
+    }
+
+    /* 4. Advanced Card 3D Hover & Micro-interactions */
+    .card,
+    .industry-card,
+    .service-block>div,
+    .project-card,
+    .metric-card {
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease !important;
+        will-change: transform;
+    }
+
+    /* Selectively exclude images inside service block from getting double hover */
+    .service-block>div:hover:not(:has(img:only-child)) {
+        transform: translateY(-8px);
+    }
+
+    .card:hover,
+    .industry-card:hover,
+    .project-card:hover,
+    .metric-card:hover {
+        transform: translateY(-10px) scale(1.02) !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+        border-color: var(--color-gold) !important;
+    }
+
+    /* 5. Scroll Animations (AOS Equivalent) */
+    .premium-animate-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
+    }
+
+    .premium-animate-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger delays for grid items */
+    .premium-delay-1 {
+        transition-delay: 0.1s;
+    }
+
+    .premium-delay-2 {
+        transition-delay: 0.2s;
+    }
+
+    .premium-delay-3 {
+        transition-delay: 0.3s;
+    }
+
+    .premium-delay-4 {
+        transition-delay: 0.4s;
+    }
+
+    /* 6. Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. Setup Elements for Animation
+        // We target heavy text blocks and grid cards
+        const targets = document.querySelectorAll('.section-subtitle, h2, .card, .industry-card, .project-card, .service-block > div, .timeline-step, .metric-card, .product-block, .trust-grid > div');
+
+        targets.forEach((el, index) => {
+            el.classList.add('premium-animate-up');
+            // Add staggered delay to sibling cards in a grid 
+            if (el.parentElement && (el.parentElement.classList.contains('card-grid') ||
+                el.parentElement.classList.contains('grid-12') ||
+                el.parentElement.classList.contains('cases-grid') ||
+                el.parentElement.classList.contains('trust-grid'))) {
+                const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
+                const delayClass = 'premium-delay-' + ((siblingIndex % 4) + 1);
+                el.classList.add(delayClass);
+            }
+        });
+
+        // 2. Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -10% 0px', // Trigger slightly before element enters viewport
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Once visible, we can unobserve to prevent re-animating on scroll up (optional)
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 3. Start observing
+        document.querySelectorAll('.premium-animate-up').forEach(el => {
+            // Elements already high up in the viewport should just show immediately
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                // Give them a tiny timeout to allow CSS to parse, then show
+                setTimeout(() => {
+                    el.classList.add('is-visible');
+                }, 50);
+            } else {
+                observer.observe(el);
+            }
+        });
+    });
+</script>
+<!-- /Premium Enhancements -->
 </body>
 
 </html>

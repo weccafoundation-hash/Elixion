@@ -1,0 +1,196 @@
+<!-- Premium Enhancements -->
+<style>
+    /* 
+    1. Logo Size Increase (2x)
+    Assuming default was height: 60px.
+    Using !important to cleanly override the external styles.css without touching the file itself.
+  */
+    .logo img,
+    .footer-logo img {
+        height: 120px !important;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        transform-origin: center left;
+    }
+
+    .footer-logo img {
+        transform-origin: center center;
+    }
+
+        .logo img {
+        /* Premium Background Hover Mechanics */
+        border-radius: 100px;
+        padding: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s, background-color 0.4s, padding 0.4s !important;
+    }
+
+    .logo img:hover {
+        transform: scale(1.05) !important;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .footer-logo img:hover {
+        transform: scale(1.05) !important;
+    }
+
+    /* 
+    2. Glassmorphism Navigation Bar
+    Elevates the standard solid header into a premium blurred transparency 
+  */
+    .header {
+        background: rgba(2, 26, 63, 0.9) !important;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 3. Advanced Button "Shine" Animation */
+    .btn-primary {
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transform-style: preserve-3d;
+    }
+
+    .btn-primary::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+        transform: skewX(-25deg);
+        animation: shine 4s infinite;
+        z-index: -1;
+    }
+
+    @keyframes shine {
+        0% {
+            left: -100%;
+        }
+
+        20% {
+            left: 200%;
+        }
+
+        100% {
+            left: 200%;
+        }
+    }
+
+    /* 4. Advanced Card 3D Hover & Micro-interactions */
+    .card,
+    .industry-card,
+    .service-block>div,
+    .project-card,
+    .metric-card {
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease !important;
+        will-change: transform;
+    }
+
+    /* Selectively exclude images inside service block from getting double hover */
+    .service-block>div:hover:not(:has(img:only-child)) {
+        transform: translateY(-8px);
+    }
+
+    .card:hover,
+    .industry-card:hover,
+    .project-card:hover,
+    .metric-card:hover {
+        transform: translateY(-10px) scale(1.02) !important;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+        border-color: var(--color-gold) !important;
+    }
+
+    /* 5. Scroll Animations (AOS Equivalent) */
+    .premium-animate-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: opacity, transform;
+    }
+
+    .premium-animate-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger delays for grid items */
+    .premium-delay-1 {
+        transition-delay: 0.1s;
+    }
+
+    .premium-delay-2 {
+        transition-delay: 0.2s;
+    }
+
+    .premium-delay-3 {
+        transition-delay: 0.3s;
+    }
+
+    .premium-delay-4 {
+        transition-delay: 0.4s;
+    }
+
+    /* 6. Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. Setup Elements for Animation
+        // We target heavy text blocks and grid cards
+        const targets = document.querySelectorAll('.section-subtitle, h2, .card, .industry-card, .project-card, .service-block > div, .timeline-step, .metric-card, .product-block, .trust-grid > div');
+
+        targets.forEach((el, index) => {
+            el.classList.add('premium-animate-up');
+            // Add staggered delay to sibling cards in a grid 
+            if (el.parentElement && (el.parentElement.classList.contains('card-grid') ||
+                el.parentElement.classList.contains('grid-12') ||
+                el.parentElement.classList.contains('cases-grid') ||
+                el.parentElement.classList.contains('trust-grid'))) {
+                const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
+                const delayClass = 'premium-delay-' + ((siblingIndex % 4) + 1);
+                el.classList.add(delayClass);
+            }
+        });
+
+        // 2. Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -10% 0px', // Trigger slightly before element enters viewport
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Once visible, we can unobserve to prevent re-animating on scroll up (optional)
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 3. Start observing
+        document.querySelectorAll('.premium-animate-up').forEach(el => {
+            // Elements already high up in the viewport should just show immediately
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                // Give them a tiny timeout to allow CSS to parse, then show
+                setTimeout(() => {
+                    el.classList.add('is-visible');
+                }, 50);
+            } else {
+                observer.observe(el);
+            }
+        });
+    });
+</script>
+<!-- /Premium Enhancements -->

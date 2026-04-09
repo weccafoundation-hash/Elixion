@@ -20,7 +20,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="components.css">
+    
     <style>
+        /* Premium Page Overrides */
+        .page-hero {
+            position: relative;
+            background-color: var(--color-primary) !important;
+            background-image: linear-gradient(to right, rgba(2, 26, 63, 0.95) 0%, rgba(2, 26, 63, 0.8) 100%), url('hero-bg.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            padding: clamp(8rem, 12vw, 10rem) 0 clamp(4rem, 6vw, 6rem) !important;
+            color: var(--color-white) !important;
+            margin-top: -80px; /* Pull up behind the transparent header */
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: var(--color-white) !important;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero p {
+            position: relative;
+            z-index: 2;
+        }
+
         .about-grid {
             display: grid;
             grid-template-columns: 3fr 2fr;
@@ -43,28 +70,76 @@
 
         .value-card {
             background: var(--color-white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            border-bottom: 4px solid var(--color-green);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(2, 26, 63, 0.05);
+            text-align: left;
+            border: 1px solid rgba(212, 168, 67, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
             height: 100%;
         }
 
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--color-gold);
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(2, 26, 63, 0.08);
+        }
+
+        .value-card:hover::before {
+            transform: scaleY(1);
+            transform-origin: top;
+        }
+        
+        .value-card h3 {
+            color: var(--color-primary) !important;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
         .quick-facts-card {
-            background-color: var(--color-navy-light);
+            background-color: var(--color-primary) !important;
             color: var(--color-white);
             padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-lg);
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 168, 67, 0.1) !important;
+        }
+
+        .quick-facts-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(212, 168, 67, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, 30%);
+            pointer-events: none;
         }
 
         .quick-facts-card h3 {
-            color: var(--color-white);
+            color: var(--color-gold) !important;
             margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--color-green);
-            padding-bottom: 0.5rem;
             display: inline-block;
+            border-bottom: none;
+            font-size: 1.5rem;
         }
 
         .quick-facts-list {
@@ -74,22 +149,28 @@
         }
 
         .quick-facts-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
+            margin-bottom: 1.25rem !important;
+            padding-left: 2rem;
             position: relative;
+            color: #D3D9E6 !important;
+            line-height: 1.6;
         }
 
         .quick-facts-list li::before {
-            content: '→';
-            color: var(--color-green);
+            content: '\2713';
+            color: var(--color-gold);
             position: absolute;
             left: 0;
-            top: 0;
+            top: 2px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .quick-facts-list strong {
-            color: var(--color-green);
+            color: var(--color-white);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.25rem;
         }
     </style>
 </head>
@@ -98,7 +179,7 @@
 
     <!-- Header -->
     <header class="header">
-        <div class="container nav-container">
+        <div class="container nav-container" style="position: relative;">
             <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
             <nav aria-label="Main Navigation">
                 <ul class="nav-menu">
@@ -146,15 +227,12 @@
                     floor.</p>
             </div>
 
-            <div class="quick-facts-card">
+            <div class="quick-facts-card premium-animate-up">
                 <h3>Quick Facts</h3>
                 <ul class="quick-facts-list">
-                    <li><strong>Core Divisions:</strong> Cleaning, Fumigation, Procurement & Sales, Manufacturing,
-                        Energy, Construction</li>
-                    <li><strong>Service Focus:</strong> Uncompromising quality, rigorous safety protocols, reliable
-                        delivery, and professional execution.</li>
-                    <li><strong>Manufacturing Pipeline:</strong> High-grade medical and industrial consumables including
-                        gloves, tissue paper, and pads (samples arriving next week).</li>
+                    <li><strong>Core Divisions</strong> Cleaning, Fumigation, Procurement & Sales, Manufacturing, Energy, Construction</li>
+                    <li><strong>Service Focus</strong> Uncompromising quality, rigorous safety protocols, reliable delivery, and professional execution.</li>
+                    <li><strong>Manufacturing Pipeline</strong> High-grade medical and industrial consumables including gloves, tissue paper, and pads.</li>
                 </ul>
             </div>
         </div>
@@ -168,24 +246,24 @@
                 <h2>Vision, Mission & Values</h2>
             </div>
             <div class="value-cards">
-                <div class="value-card">
-                    <h3 style="color: var(--color-navy); margin-bottom: 1rem;">Our Vision</h3>
+                <div class="value-card premium-animate-up premium-delay-1">
+                    <h3>Our Vision</h3>
                     <p>To be universally recognized as the premier multidisciplinary service and manufacturing
                         conglomerate, establishing global standards for quality, innovation, and sustainable practices
                         in every sector we operate.</p>
                 </div>
-                <div class="value-card">
-                    <h3 style="color: var(--color-navy); margin-bottom: 1rem;">Our Mission</h3>
+                <div class="value-card premium-animate-up premium-delay-2">
+                    <h3>Our Mission</h3>
                     <p>To empower businesses by delivering integrated, safe, and customer-centered operational
                         solutions. We strive to be the invisible force that keeps our clients' enterprises running
                         flawlessly with a supreme focus on quality and safety.</p>
                 </div>
-                <div class="value-card">
-                    <h3 style="color: var(--color-navy); margin-bottom: 1rem;">Our Values</h3>
-                    <p><strong>Integrity:</strong> Ethical practices in all client relationships.<br>
-                        <strong>Safety:</strong> Wellbeing of staff and clients is paramount.<br>
-                        <strong>Excellence:</strong> Refusing to settle for average.<br>
-                        <strong>Reliability:</strong> Consistent, timely execution.<br>
+                <div class="value-card premium-animate-up premium-delay-3">
+                    <h3>Our Values</h3>
+                    <p><strong>Integrity:</strong> Ethical practices in all client relationships.<br><br>
+                        <strong>Safety:</strong> Wellbeing of staff and clients is paramount.<br><br>
+                        <strong>Excellence:</strong> Refusing to settle for average.<br><br>
+                        <strong>Reliability:</strong> Consistent, timely execution.<br><br>
                         <strong>Innovation:</strong> Investing in new efficiencies.
                     </p>
                 </div>
@@ -199,13 +277,11 @@
             <div class="section-header">
                 <span class="section-subtitle">What We Do</span>
                 <h2>Our Divisions</h2>
-                <p style="color: var(--color-text-light);">Six pillars of operational excellence supporting your
-                    enterprise.</p>
+                <p style="color: var(--color-text-light);">Six pillars of operational excellence supporting your enterprise.</p>
             </div>
             <div class="card-grid">
                 <a href="services.html" class="card">
-                    <img src="cleaning-service.png" alt="Cleaning Services" class="card-img" loading="lazy"
-                        decoding="async">
+                    <img src="cleaning-service.png" alt="Cleaning Services" class="card-img" loading="lazy" decoding="async">
                     <div class="card-body">
                         <h3 class="card-title">Cleaning & Facility Services</h3>
                         <p class="card-text">Corporate, industrial, and post-construction cleaning.</p>
@@ -219,16 +295,14 @@
                     </div>
                 </a>
                 <a href="services.html" class="card">
-                    <img src="procurement-service.png" alt="Procurement" class="card-img" loading="lazy"
-                        decoding="async">
+                    <img src="procurement-service.png" alt="Procurement" class="card-img" loading="lazy" decoding="async">
                     <div class="card-body">
                         <h3 class="card-title">Procurement & Sales</h3>
                         <p class="card-text">Sourcing and logistics for premium supplies.</p>
                     </div>
                 </a>
                 <a href="manufacturing.html" class="card">
-                    <img src="manufacturing-service.png" alt="Manufacturing" class="card-img" loading="lazy"
-                        decoding="async">
+                    <img src="manufacturing-service.png" alt="Manufacturing" class="card-img" loading="lazy" decoding="async">
                     <div class="card-body">
                         <h3 class="card-title">Manufacturing</h3>
                         <p class="card-text">Medical & Industrial Consumables production.</p>
@@ -242,8 +316,7 @@
                     </div>
                 </a>
                 <a href="services.html" class="card">
-                    <img src="construction-service.png" alt="Construction" class="card-img" loading="lazy"
-                        decoding="async">
+                    <img src="construction-service.png" alt="Construction" class="card-img" loading="lazy" decoding="async">
                     <div class="card-body">
                         <h3 class="card-title">Construction</h3>
                         <p class="card-text">Project management from planning to execution.</p>
@@ -265,28 +338,28 @@
             </div>
 
             <div class="process-timeline">
-                <div class="timeline-step">
+                <div class="timeline-step premium-animate-up">
                     <div class="step-marker">1</div>
                     <h3>Assess</h3>
                     <p>Thorough site evaluation to identify specific needs, risks, and required resources.</p>
                 </div>
-                <div class="timeline-step">
+                <div class="timeline-step premium-animate-up">
                     <div class="step-marker">2</div>
                     <h3>Plan</h3>
                     <p>Development of a customized, compliant strategy detailing schedules, equipment, and safety
                         protocols.</p>
                 </div>
-                <div class="timeline-step">
+                <div class="timeline-step premium-animate-up">
                     <div class="step-marker">3</div>
                     <h3>Execute</h3>
                     <p>Implementation by trained professionals utilizing appropriate PPE and specialized tools.</p>
                 </div>
-                <div class="timeline-step">
+                <div class="timeline-step premium-animate-up">
                     <div class="step-marker">4</div>
                     <h3>Inspect</h3>
                     <p>Rigorous quality assurance checks to verify work meets our uncompromising standards.</p>
                 </div>
-                <div class="timeline-step">
+                <div class="timeline-step premium-animate-up">
                     <div class="step-marker">5</div>
                     <h3>Report</h3>
                     <p>Delivery of transparent documentation and client wrap-up for total peace of mind.</p>
@@ -296,9 +369,9 @@
     </section>
 
     <!-- CTA Strip -->
-    <section class="cta-banner">
+    <section class="cta-banner" style="background-color: var(--color-off-white) !important; color: var(--color-text-main) !important;">
         <div class="container">
-            <h2>Need professional support for your facility or supply needs?</h2>
+            <h2 style="color: var(--color-navy) !important;">Need professional support for your facility or supply needs?</h2>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                 <a href="#"
                     onclick="window.open(window.buildWaLink('Hello Elixion Prime, I’d like to request a quote. Service: [Cleaning/Fumigation/Procurement/Manufacturing/Energy/Construction]. Location: [ ].'), '_blank'); return false;"
@@ -333,9 +406,7 @@
                     <h4>Contact Info</h4>
                     <ul>
                         <li>&#128222; <a href="tel:+2349034168823">+234 903 416 8823</a></li>
-                        <li>&#9993; <a
-                                href="mailto:info@elixionprimeinternational.com">info@elixionprimeinternational.com</a>
-                        </li>
+                        <li>&#9993; <a href="mailto:info@elixionprimeinternational.com">info@elixionprimeinternational.com</a></li>
                         <li>&#128205; Lekki Epe Expressway, Lekki Phase 1, Lagos, Nigeria</li>
                     </ul>
                 </div>
@@ -366,6 +437,234 @@
 
     <script type="module" src="whatsapp.js" defer></script>
     <script src="main.js" defer></script>
+    
+    <!-- Premium Enhancements & Animations -->
+    <style>
+        /* 1. Premium Header Layout & Breakout Logo Positioning */
+        .header {
+            background: rgba(2, 26, 63, 0.9) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 80px; 
+            width: 140px; 
+        }
+
+        .logo img {
+            position: absolute;
+            top: 20px; 
+            height: 120px !important;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s !important;
+            transform-origin: top left;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+            z-index: 1001; 
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                height: 80px !important;
+                top: 50%;
+                transform: translateY(-50%) !important;
+            }
+        }
+
+        .footer-logo img {
+            height: 100px !important;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            transform-origin: center center;
+        }
+
+            .logo img {
+        /* Premium Background Hover Mechanics */
+        border-radius: 100px;
+        padding: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s, background-color 0.4s, padding 0.4s !important;
+    }
+
+    .logo img:hover {
+        transform: scale(1.05) !important;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .footer-logo img:hover {
+        transform: scale(1.05) !important;
+    }
+
+        /* 2. Glassmorphism navigation links */
+        .nav-link {
+            color: #fff !important; 
+            opacity: 0.9;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-gold) !important;
+            opacity: 1;
+        }
+
+        /* 3. Advanced Button "Shine" Animation */
+        .btn-primary {
+            background: var(--color-gold) !important;
+            color: var(--color-primary) !important;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+            border: none;
+            box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            animation: shine 4s infinite;
+            z-index: -1;
+        }
+
+        .cta-banner .btn-secondary {
+            border-color: var(--color-primary) !important;
+            color: var(--color-primary) !important;
+        }
+        
+        .cta-banner .btn-secondary:hover {
+            background: var(--color-primary) !important;
+            color: #fff !important;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        /* 4. Advanced Card Hover Micro-interactions */
+        .card {
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+            will-change: transform;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .card .card-img {
+            transition: transform 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(2, 26, 63, 0.08), 0 5px 15px rgba(2, 26, 63, 0.05);
+            border-color: rgba(212, 168, 67, 0.3);
+        }
+        
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        /* Timeline Step Enhancements */
+        .timeline-step {
+            transition: transform 0.3s ease;
+        }
+        .timeline-step:hover {
+            transform: translateX(10px);
+        }
+        .step-marker {
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+        }
+        .timeline-step:hover .step-marker {
+            transform: scale(1.1);
+            background-color: var(--color-gold);
+            color: var(--color-primary);
+        }
+
+        /* 5. Scroll Animations */
+        .premium-animate-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: opacity, transform;
+        }
+
+        .premium-animate-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .premium-delay-1 { transition-delay: 0.1s; }
+        .premium-delay-2 { transition-delay: 0.2s; }
+        .premium-delay-3 { transition-delay: 0.3s; }
+        .premium-delay-4 { transition-delay: 0.4s; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .card-img {
+            background: var(--color-off-white);
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Setup Elements for Animation
+            const targets = document.querySelectorAll('.section-subtitle, h2, .card, .value-card, .quick-facts-card, .timeline-step, .overview-text p');
+
+            targets.forEach((el, index) => {
+                el.classList.add('premium-animate-up');
+                // Staggered delay logic
+                if (el.parentElement && (el.parentElement.classList.contains('card-grid') || el.parentElement.classList.contains('value-cards') || el.parentElement.classList.contains('process-timeline'))) {
+                    const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
+                    const delayClass = 'premium-delay-' + ((siblingIndex % 4) + 1);
+                    el.classList.add(delayClass);
+                }
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.premium-animate-up').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    setTimeout(() => { el.classList.add('is-visible'); }, 50);
+                } else {
+                    observer.observe(el);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Cleaning & Fumigation Services | Elixion Prime</title>
 
-
     <!-- Open Graph Placeholders -->
     <meta property="og:title" content="Our Services - Elixion Prime">
     <meta property="og:description"
@@ -19,7 +18,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="components.css">
+    
     <style>
+        /* Premium Page Overrides */
+        .page-hero {
+            position: relative;
+            background-color: var(--color-primary) !important;
+            background-image: linear-gradient(to right, rgba(2, 26, 63, 0.95) 0%, rgba(2, 26, 63, 0.8) 100%), url('hero-bg.png') !important;
+            background-size: cover !important;
+            background-position: center !important;
+            padding: clamp(8rem, 12vw, 10rem) 0 clamp(4rem, 6vw, 6rem) !important;
+            color: var(--color-white) !important;
+            margin-top: -80px; /* Pull up behind the transparent header */
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: var(--color-white) !important;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero p {
+            position: relative;
+            z-index: 2;
+        }
+
         .service-block {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -66,28 +92,32 @@
         }
 
         .service-features li::before {
-            content: '✓';
+            content: '\2713';
             position: absolute;
             left: 0;
-            color: var(--color-white);
-            background-color: var(--color-green);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            top: 2px;
+            color: var(--color-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            top: 0px;
         }
 
         .service-note {
-            background-color: rgba(0, 191, 166, 0.1);
-            border-left: 4px solid var(--color-green);
+            background-color: rgba(212, 168, 67, 0.05);
+            border-left: 4px solid var(--color-gold);
             padding: 1rem;
             margin-top: 1.5rem;
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 8px 8px 0;
             font-size: 0.95rem;
+        }
+        
+        .service-block img {
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            will-change: transform;
+        }
+        
+        .service-block img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(2, 26, 63, 0.15) !important;
         }
     </style>
 </head>
@@ -96,7 +126,7 @@
 
     <!-- Header -->
     <header class="header">
-        <div class="container nav-container">
+        <div class="container nav-container" style="position: relative;">
             <a href="index.html" class="logo"><img src="logo.png" alt="Elixion Prime logo"></a>
             <nav aria-label="Main Navigation">
                 <ul class="nav-menu">
@@ -132,7 +162,7 @@
         <div class="container">
 
             <!-- Cleaning -->
-            <div class="service-block">
+            <div class="service-block premium-animate-up">
                 <div>
                     <span class="section-subtitle">Facility Management</span>
                     <h2>Professional Cleaning Services</h2>
@@ -158,12 +188,12 @@
                 </div>
                 <div>
                     <img src="srv_cleaning.png" alt="Professional Cleaning"
-                        style="border-radius: 8px; box-shadow: var(--shadow-md);" loading="lazy" decoding="async">
+                        style="border-radius: 12px; box-shadow: var(--shadow-md);" loading="lazy" decoding="async">
                 </div>
             </div>
 
             <!-- Fumigation -->
-            <div class="service-block" style="margin-bottom: 0;">
+            <div class="service-block premium-animate-up" style="margin-bottom: 0;">
                 <div>
                     <span class="section-subtitle">Environmental Health</span>
                     <h2>Fumigation & Pest Control</h2>
@@ -189,7 +219,7 @@
                 </div>
                 <div>
                     <img src="branded_fumigation-service.png" alt="Fumigation"
-                        style="border-radius: 8px; box-shadow: var(--shadow-md);" loading="lazy" decoding="async">
+                        style="border-radius: 12px; box-shadow: var(--shadow-md);" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -199,13 +229,13 @@
     <!-- Other Divisions (Secondary Grid) -->
     <section class="section" style="background-color: var(--color-off-white);">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header premium-animate-up">
                 <span class="section-subtitle">Comprehensive Support</span>
                 <h2>Other Divisions</h2>
                 <p style="color: var(--color-text-light);">Integrated solutions tailored for operational synergy.</p>
             </div>
             <div class="card-grid">
-                <div class="card">
+                <div class="card premium-animate-up premium-delay-1">
                     <img src="branded_procurement-service.png" alt="Procurement & Sales" class="card-img"
                         loading="lazy">
                     <div class="card-body">
@@ -214,7 +244,7 @@
                             general corporate supplies. We handle the logistics so you can focus on operations.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card premium-animate-up premium-delay-2">
                     <img src="branded_manufacturing-service.png" alt="Manufacturing" class="card-img" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Manufacturing</h3>
@@ -222,7 +252,7 @@
                             tissue paper, and pads. <em>Samples arriving next week.</em></p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card premium-animate-up premium-delay-3">
                     <img src="branded_energy-service.png" alt="Energy" class="card-img" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Energy</h3>
@@ -230,7 +260,7 @@
                             empower modern corporate and industrial scaling.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card premium-animate-up premium-delay-4">
                     <img src="branded_construction-service.png" alt="Construction" class="card-img" loading="lazy">
                     <div class="card-body">
                         <h3 class="card-title">Construction</h3>
@@ -245,7 +275,7 @@
     <!-- How We Work (Process Section) -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header premium-animate-up">
                 <span class="section-subtitle">Our Process</span>
                 <h2>How We Work</h2>
                 <p style="color: var(--color-text-light);">A transparent, six-step engagement model ensuring exceptional
@@ -253,37 +283,37 @@
             </div>
 
             <div class="steps-grid">
-                <div class="step-card">
+                <div class="step-card premium-animate-up premium-delay-1">
                     <span class="step-number">1</span>
                     <h3>Request</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">Submit your detailed service
                         requirements via our online portal or phone.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card premium-animate-up premium-delay-2">
                     <span class="step-number">2</span>
                     <h3>Assessment</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">Our specialists conduct a thorough
                         site evaluation to determine exact needs.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card premium-animate-up premium-delay-3">
                     <span class="step-number">3</span>
                     <h3>Quote</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">We provide a transparent, customized
                         proposal outlining costs and timelines.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card premium-animate-up premium-delay-4">
                     <span class="step-number">4</span>
                     <h3>Execution</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">Trained professionals deploy to
                         execute the service according to plan.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card premium-animate-up premium-delay-1">
                     <span class="step-number">5</span>
                     <h3>Quality Check</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">Supervisors perform rigorous
                         inspections to verify standards are met.</p>
                 </div>
-                <div class="step-card">
+                <div class="step-card premium-animate-up premium-delay-2">
                     <span class="step-number">6</span>
                     <h3>Delivery</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">Final handover complete with
@@ -296,12 +326,12 @@
     <!-- FAQ Accordion -->
     <section class="section" style="background-color: var(--color-off-white);">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header premium-animate-up">
                 <span class="section-subtitle">Knowledge Base</span>
                 <h2>Frequently Asked Questions</h2>
             </div>
 
-            <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+            <div class="accordion premium-animate-up" style="max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: rgba(0,0,0,0.05);">
                 <div class="accordion-item">
                     <button class="accordion-btn" aria-expanded="false">How do I request a quote?</button>
                     <div class="accordion-content">
@@ -374,16 +404,16 @@
     <!-- Service Request Form Section -->
     <section id="request-form" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header premium-animate-up">
                 <span class="section-subtitle">Get Started</span>
                 <h2>Service Request Form</h2>
                 <p style="color: var(--color-text-light);">Fill out the form below and our team will get back to you
                     promptly.</p>
             </div>
 
-            <div class="form-container">
+            <div class="form-container premium-animate-up" style="box-shadow: 0 15px 40px rgba(2, 26, 63, 0.08); border: 1px solid rgba(212, 168, 67, 0.1);">
                 <form id="serviceForm" novalidate>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                         <div class="form-group">
                             <label for="fullName" class="form-label">Full Name *</label>
                             <input type="text" id="fullName" class="form-control" required placeholder="John Doe">
@@ -394,7 +424,7 @@
                         </div>
                         <div class="form-group">
                             <label for="phone" class="form-label">Phone Number *</label>
-                            <input type="tel" id="phone" class="form-control" required placeholder="+1 (555) 000-0000">
+                            <input type="tel" id="phone" class="form-control" required placeholder="+234 000 000 0000">
                         </div>
                         <div class="form-group">
                             <label for="serviceType" class="form-label">Service Type *</label>
@@ -492,6 +522,236 @@
     <script type="module" src="whatsapp.js" defer></script>
     <script src="main.js" defer></script>
     <script type="module" src="form.js" defer></script>
+
+    <!-- Premium Enhancements & Animations -->
+    <style>
+        /* 1. Premium Header Layout & Breakout Logo Positioning */
+        .header {
+            background: rgba(2, 26, 63, 0.9) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 80px; 
+            width: 140px; 
+        }
+
+        .logo img {
+            position: absolute;
+            top: 20px; 
+            height: 120px !important;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s !important;
+            transform-origin: top left;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+            z-index: 1001; 
+        }
+
+        @media (max-width: 768px) {
+            .logo img {
+                height: 80px !important;
+                top: 50%;
+                transform: translateY(-50%) !important;
+            }
+        }
+
+        .footer-logo img {
+            height: 100px !important;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            transform-origin: center center;
+        }
+
+            .logo img {
+        /* Premium Background Hover Mechanics */
+        border-radius: 100px;
+        padding: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s, background-color 0.4s, padding 0.4s !important;
+    }
+
+    .logo img:hover {
+        transform: scale(1.05) !important;
+        background-color: #ffffff;
+        padding: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .footer-logo img:hover {
+        transform: scale(1.05) !important;
+    }
+
+        /* 2. Glassmorphism navigation links */
+        .nav-link {
+            color: #fff !important; 
+            opacity: 0.9;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-gold) !important;
+            opacity: 1;
+        }
+
+        /* 3. Advanced Button "Shine" Animation */
+        .btn-primary {
+            background: var(--color-gold) !important;
+            color: var(--color-primary) !important;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transform-style: preserve-3d;
+            border: none;
+            box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 168, 67, 0.4);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            animation: shine 4s infinite;
+            z-index: -1;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        /* 4. Advanced Card Hover Micro-interactions */
+        .card {
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+            will-change: transform;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .card .card-img {
+            transition: transform 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(2, 26, 63, 0.08), 0 5px 15px rgba(2, 26, 63, 0.05);
+            border-color: rgba(212, 168, 67, 0.3);
+        }
+        
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        /* Timeline / Process Enhancements */
+        .step-card {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border-top-color: transparent !important;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .step-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-gold);
+            box-shadow: 0 15px 30px rgba(2, 26, 63, 0.08);
+        }
+        .step-number {
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            background-color: rgba(212, 168, 67, 0.1) !important;
+            color: var(--color-gold) !important;
+        }
+        .step-card:hover .step-number {
+            background-color: var(--color-gold) !important;
+            color: var(--color-primary) !important;
+            transform: scale(1.1);
+        }
+
+        /* 5. Scroll Animations */
+        .premium-animate-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: opacity, transform;
+        }
+
+        .premium-animate-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .premium-delay-1 { transition-delay: 0.1s; }
+        .premium-delay-2 { transition-delay: 0.2s; }
+        .premium-delay-3 { transition-delay: 0.3s; }
+        .premium-delay-4 { transition-delay: 0.4s; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .card-img {
+            background: var(--color-off-white);
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Setup Elements for Animation
+            const targets = document.querySelectorAll('.section-header, .service-block, .card, .step-card, .accordion, .form-container');
+
+            targets.forEach((el, index) => {
+                // Ignore elements that already have the class manually appended
+                if(!el.classList.contains('premium-animate-up')) {
+                    el.classList.add('premium-animate-up');
+                }
+                
+                // Staggered delay logic for grids
+                if (el.parentElement && (el.parentElement.classList.contains('card-grid') || el.parentElement.classList.contains('steps-grid'))) {
+                    const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
+                    const delayClass = 'premium-delay-' + ((siblingIndex % 4) + 1);
+                    if(!el.classList.contains(delayClass) && !el.classList.toString().match(/premium-delay-\d/)) {
+                        el.classList.add(delayClass);
+                    }
+                }
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.premium-animate-up').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    setTimeout(() => { el.classList.add('is-visible'); }, 50);
+                } else {
+                    observer.observe(el);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
